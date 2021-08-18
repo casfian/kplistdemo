@@ -11,6 +11,48 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Material App Bar'),
         ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Title'),
+                subtitle: Text('subTitle'),
+                trailing: Text('Trailing'),
+                onTap: () {
+                  //code
+                  print('I click List1');
+                },
+              ),
+              Divider(
+                thickness: 2,
+              ),
+              ListTile(
+                leading: Icon(Icons.person),
+                title: Text('Title'),
+                subtitle: Text('subTitle'),
+                trailing: Text('Trailing'),
+                onTap: () {
+                  //code
+                  print('I click List2');
+                },
+              ),
+              Divider(
+                thickness: 2,
+              ),
+              ListTile(
+                leading: Icon(Icons.place),
+                title: Text('Title'),
+                subtitle: Text('subTitle'),
+                trailing: Text('Trailing'),
+                onTap: () {
+                  //code
+                  print('I click List3');
+                },
+              ),
+            ],
+          ),
+        ),
         //buat secara manual
         body: ListView(
           children: [
@@ -24,7 +66,9 @@ class MyApp extends StatelessWidget {
                 print('I click List1');
               },
             ),
-            Divider(thickness: 2,),
+            Divider(
+              thickness: 2,
+            ),
             ListTile(
               leading: Icon(Icons.person),
               title: Text('Title'),
@@ -35,7 +79,9 @@ class MyApp extends StatelessWidget {
                 print('I click List2');
               },
             ),
-            Divider(thickness: 2,),
+            Divider(
+              thickness: 2,
+            ),
             ListTile(
               leading: Icon(Icons.place),
               title: Text('Title'),
