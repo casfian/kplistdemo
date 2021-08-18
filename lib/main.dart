@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-//root
+//root class
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//secondary class
+//create secondary class
 class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +28,9 @@ class Home extends StatelessWidget {
             children: [
               ListTile(
                 leading: Icon(Icons.home),
-                title: Text('Title'),
-                subtitle: Text('subTitle'),
-                trailing: Text('Trailing'),
+                title: Text('Home'),
+                subtitle: Text('balik Skrin asal'),
+                trailing: Icon(Icons.arrow_forward),
                 onTap: () {
                   //code
                   print('I click List1');
@@ -41,9 +42,9 @@ class Home extends StatelessWidget {
               ),
               ListTile(
                 leading: Icon(Icons.person),
-                title: Text('Title'),
-                subtitle: Text('subTitle'),
-                trailing: Text('Trailing'),
+                title: Text('Pelajar'),
+                subtitle: Text('Senarai semua pelajar Kolej'),
+                trailing: Icon(Icons.arrow_forward),
                 onTap: () {
                   //code
                   print('I click List2');
@@ -55,9 +56,9 @@ class Home extends StatelessWidget {
               ),
               ListTile(
                 leading: Icon(Icons.place),
-                title: Text('Title'),
-                subtitle: Text('subTitle'),
-                trailing: Text('Trailing'),
+                title: Text('About'),
+                subtitle: Text('Tentang Kolej Komuniti Kuala Pilah'),
+                trailing: Icon(Icons.arrow_forward),
                 onTap: () {
                   //code
                   print('I click List3');
