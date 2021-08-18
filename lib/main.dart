@@ -2,12 +2,23 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
+//root
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: Scaffold(
+      home: Home(),
+    );
+  }
+}
+
+//secondary class
+class Home extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
         appBar: AppBar(
           title: Text('Material App Bar'),
         ),
@@ -22,6 +33,7 @@ class MyApp extends StatelessWidget {
                 onTap: () {
                   //code
                   print('I click List1');
+                  Navigator.pop(context);
                 },
               ),
               Divider(
@@ -35,6 +47,7 @@ class MyApp extends StatelessWidget {
                 onTap: () {
                   //code
                   print('I click List2');
+                  Navigator.pop(context);
                 },
               ),
               Divider(
@@ -48,6 +61,7 @@ class MyApp extends StatelessWidget {
                 onTap: () {
                   //code
                   print('I click List3');
+                  Navigator.pop(context);
                 },
               ),
             ],
@@ -94,7 +108,6 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }
