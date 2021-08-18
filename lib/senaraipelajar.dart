@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lkpistdemo/detailpelajar.dart';
 import 'package:lkpistdemo/pelajar.dart';
 
 class SenaraiPelajar extends StatelessWidget {
@@ -20,19 +21,35 @@ class SenaraiPelajar extends StatelessWidget {
           itemCount: pelajar.length,
           itemBuilder: (context, index) {
             //return sebuat widget UI you buat sendiri
-            return Container(
-              margin: EdgeInsets.all(10),
-              height: 100,
-              child: Card(
-                child: Row(
-                  children: [
-                    Image.asset(pelajar[index].photo),
-                    Text(pelajar[index].cgpa, style: TextStyle(fontSize: 25),),
-                    SizedBox(width: 30,),
-                    Text(pelajar[index].nama, style: TextStyle(fontSize: 25, color: Colors.red),),
-                    SizedBox(width: 30,),
-                    
-                  ],
+            return InkWell(
+              onTap: () {
+                //navigate
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Detailpelajar() ));
+              },
+              child: Container(
+                margin: EdgeInsets.all(10),
+                height: 100,
+                child: Card(
+                  child: Row(
+                    children: [
+                      Image.asset(pelajar[index].photo),
+                      Text(
+                        pelajar[index].cgpa,
+                        style: TextStyle(fontSize: 25),
+                      ),
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Text(
+                        pelajar[index].nama,
+                        style: TextStyle(fontSize: 25, color: Colors.red),
+                      ),
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Icon(Icons.arrow_forward_ios),
+                    ],
+                  ),
                 ),
               ),
             );
