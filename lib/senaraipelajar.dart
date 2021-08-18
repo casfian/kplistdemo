@@ -24,7 +24,11 @@ class SenaraiPelajar extends StatelessWidget {
             return InkWell(
               onTap: () {
                 //navigate
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Detailpelajar() ));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            Detailpelajar(pass: pelajar[index])));
               },
               child: Container(
                 margin: EdgeInsets.all(10),
