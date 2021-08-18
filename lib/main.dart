@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
- 
+
 void main() => runApp(MyApp());
- 
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,10 +11,40 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Material App Bar'),
         ),
-        body: Center(
-          child: Container(
-            child: Text('Hello World'),
-          ),
+        //buat secara manual
+        body: ListView(
+          children: [
+            ListTile(
+              leading: Text('Leading'),
+              title: Text('Title'),
+              subtitle: Text('subTitle'),
+              trailing: Text('Trailing'),
+              onTap: () {
+                //code
+                print('I click List1');
+              },
+            ),
+            ListTile(
+              leading: Text('Leading'),
+              title: Text('Title'),
+              subtitle: Text('subTitle'),
+              trailing: Text('Trailing'),
+              onTap: () {
+                //code
+                print('I click List2');
+              },
+            ),
+            ListTile(
+              leading: Text('Leading'),
+              title: Text('Title'),
+              subtitle: Text('subTitle'),
+              trailing: Text('Trailing'),
+              onTap: () {
+                //code
+                print('I click List3');
+              },
+            ),
+          ],
         ),
       ),
     );
