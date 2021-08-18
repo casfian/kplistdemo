@@ -24,95 +24,119 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Material App Bar'),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Home'),
-              subtitle: Text('balik Skrin asal'),
-              trailing: Icon(Icons.arrow_forward),
-              onTap: () {
-                //code
-                print('I click List1');
-                Navigator.pop(context);
-              },
-            ),
-            Divider(
-              thickness: 2,
-            ),
-            ListTile(
-              leading: Icon(Icons.person),
-              title: Text('Pelajar'),
-              subtitle: Text('Senarai semua pelajar Kolej'),
-              trailing: Icon(Icons.arrow_forward),
-              onTap: () {
-                //code
-                print('I click List2');
-                Navigator.popAndPushNamed(context, 'senaraipelajar');
-              },
-            ),
-            Divider(
-              thickness: 2,
-            ),
-            ListTile(
-              leading: Icon(Icons.place),
-              title: Text('About'),
-              subtitle: Text('Tentang Kolej Komuniti Kuala Pilah'),
-              trailing: Icon(Icons.arrow_forward),
-              onTap: () {
-                //code
-                print('I click List3');
-                Navigator.pop(context);
-              },
-            ),
-          ],
+        appBar: AppBar(
+          title: Text('Kolej Komuniti'),
         ),
-      ),
-      //buat secara manual
-      body: ListView(
-        children: [
-          ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Title'),
-            subtitle: Text('subTitle'),
-            trailing: Text('Trailing'),
-            onTap: () {
-              //code
-              print('I click List1');
-            },
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Home'),
+                subtitle: Text('balik Skrin asal'),
+                trailing: Icon(Icons.arrow_forward),
+                onTap: () {
+                  //code
+                  print('I click List1');
+                  Navigator.pop(context);
+                },
+              ),
+              Divider(
+                thickness: 2,
+              ),
+              ListTile(
+                leading: Icon(Icons.person),
+                title: Text('Pelajar'),
+                subtitle: Text('Senarai semua pelajar Kolej'),
+                trailing: Icon(Icons.arrow_forward),
+                onTap: () {
+                  //code
+                  print('I click List2');
+                  Navigator.popAndPushNamed(context, 'senaraipelajar');
+                },
+              ),
+              Divider(
+                thickness: 2,
+              ),
+              ListTile(
+                leading: Icon(Icons.place),
+                title: Text('About'),
+                subtitle: Text('Tentang Kolej Komuniti Kuala Pilah'),
+                trailing: Icon(Icons.arrow_forward),
+                onTap: () {
+                  //code
+                  print('I click List3');
+                  Navigator.pop(context);
+                },
+              ),
+            ],
           ),
-          Divider(
-            thickness: 2,
+        ),
+        //buat secara manual
+        body: Center(
+          child: Column(
+            children: [
+              Text('Kolej Komuniti Kuala Pilah'),
+              Image.asset('images/kolejkomuniti.jpg'),
+              //row
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(
+                    Icons.home,
+                    size: 40,
+                    color: Colors.red,
+                  ),
+                  InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, 'senaraipelajar');
+                      },
+                      child: Icon(
+                        Icons.person,
+                        size: 40,
+                        color: Colors.blue,
+                      )),
+                  Icon(
+                    Icons.info,
+                    size: 40,
+                    color: Colors.green,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20,),
+              Container(
+                height: 100,
+                child: Expanded(
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      Container(
+                        width: 120.0,
+                        
+                        child: Image.asset('images/ADAM.jpg'),
+                      ),
+                      Container(
+                        width: 120.0,
+                        
+                        child: Image.asset('images/AMIRUL.jpg'),
+                      ),
+                      Container(
+                        width: 120.0,
+                        
+                        child: Image.asset('images/HARIZ.jpg'),
+                      ),
+                      Container(
+                        width: 120.0,
+                        
+                        child: Image.asset('images/RAFIQ.jpg'),
+                      ),
+                      
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Title'),
-            subtitle: Text('subTitle'),
-            trailing: Text('Trailing'),
-            onTap: () {
-              //code
-              print('I click List2');
-            },
-          ),
-          Divider(
-            thickness: 2,
-          ),
-          ListTile(
-            leading: Icon(Icons.place),
-            title: Text('Title'),
-            subtitle: Text('subTitle'),
-            trailing: Text('Trailing'),
-            onTap: () {
-              //code
-              print('I click List3');
-            },
-          ),
-        ],
-      ),
-    );
+        ));
   }
 }
