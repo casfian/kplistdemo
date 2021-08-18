@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         body: ListView(
           children: [
             ListTile(
-              leading: Text('Leading'),
+              leading: Icon(Icons.home),
               title: Text('Title'),
               subtitle: Text('subTitle'),
               trailing: Text('Trailing'),
@@ -24,8 +24,9 @@ class MyApp extends StatelessWidget {
                 print('I click List1');
               },
             ),
+            Divider(thickness: 2,),
             ListTile(
-              leading: Text('Leading'),
+              leading: Icon(Icons.person),
               title: Text('Title'),
               subtitle: Text('subTitle'),
               trailing: Text('Trailing'),
@@ -34,8 +35,9 @@ class MyApp extends StatelessWidget {
                 print('I click List2');
               },
             ),
+            Divider(thickness: 2,),
             ListTile(
-              leading: Text('Leading'),
+              leading: Icon(Icons.place),
               title: Text('Title'),
               subtitle: Text('subTitle'),
               trailing: Text('Trailing'),
