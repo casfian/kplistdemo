@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 
 class SenaraiPelajar extends StatelessWidget {
-  const SenaraiPelajar({Key? key}) : super(key: key);
+  //array
+  List pelajar = ['Ali', 'Ahmad', 'Abu', 'Basri'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Senarai Pelajar'),),
+      appBar: AppBar(
+        title: Text('Senarai Pelajar'),
+      ),
       body: ListView.builder(
-        itemBuilder: itemBuilder
-        ),
+          itemCount: pelajar.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(pelajar[index]),
+            );
+          }),
     );
   }
 }
