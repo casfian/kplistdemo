@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:lkpistdemo/detailpelajar.dart';
 import 'package:lkpistdemo/pelajar.dart';
 
-class SenaraiPelajar extends StatelessWidget {
+class SenaraiPelajar extends StatefulWidget {
   //array
+  @override
+  _SenaraiPelajarState createState() => _SenaraiPelajarState();
+}
+
+class _SenaraiPelajarState extends State<SenaraiPelajar> {
   List<Pelajar> pelajar = [
     Pelajar('Ali', 'images/ADAM.jpg', '4.0'),
     Pelajar('Ahmad', 'images/AMIRUL.jpg', '3.8'),
